@@ -15,7 +15,8 @@ def _platform():
         return 'darwin'
     raise ValueError("Platform not supported: {}".format(sys.platform))
 
-WHEEL_SIGNATURE = 'cp{0}-cp{0}m-{1}_x86_64'.format(_version(), _platform())
+# Note: no more 'm' abiflag since Python 3.8.0
+WHEEL_SIGNATURE = 'cp{0}-cp{0}{2}-{1}_x86_64'.format(_version(), _platform(), sys.abiflags)
 
 setup(
     name='tm-python',
