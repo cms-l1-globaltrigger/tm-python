@@ -14,5 +14,5 @@ Note that `pip` >= 19.0 is required.
 
 ```bash
 pip install --upgrade pip
-pip install git+https://github.com/cms-l1-globaltrigger/tm-python.git@0.8.2
+pip install git+https://github.com/cms-l1-globaltrigger/tm-python.git@0.9.1
 ```

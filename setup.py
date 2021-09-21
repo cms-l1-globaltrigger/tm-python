@@ -1,7 +1,7 @@
 import sys
 from setuptools import setup
 
-UTM_VERSION = '0.8.2'
+UTM_VERSION = '0.9.1'
 
 def _version():
     """Returns major and minor interpreter version."""
