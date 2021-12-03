@@ -33,19 +33,19 @@ install_requires = []
 try:
     from tmTable import __version__
     assert __version__ == UTM_VERSION
-except ModuleNotFoundError, ImportError, AssertionError:
+except (ModuleNotFoundError, ImportError, AssertionError):
     install_requires.append(_require('tm-table', UTM_VERSION))
 
 try:
     from tmGrammar import __version__
     assert __version__ == UTM_VERSION
-except ModuleNotFoundError, ImportError, AssertionError:
+except (ModuleNotFoundError, ImportError, AssertionError):
     install_requires.append(_require('tm-grammar', UTM_VERSION))
 
 try:
     from tmEventSetup import __version__
     assert __version__ == UTM_VERSION
-except ModuleNotFoundError, ImportError, AssertionError:
+except (ModuleNotFoundError, ImportError, AssertionError):
     install_requires.append(_require('tm-eventsetup', UTM_VERSION))
 
 setup(
