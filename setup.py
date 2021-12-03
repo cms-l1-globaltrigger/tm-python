@@ -26,7 +26,7 @@ def _wheel_name(name, version):
 
 def _require(name, version):
     filename = _wheel_name(name, version)
-    return f'{0} @ {BASE_URL}/{0}/releases/download/{1}/{2}'.format(name, version, filename)
+    return '{0} @ {1}/{0}/releases/download/{2}/{3}'.format(name, BASE_URL, version, filename)
 
 install_requires = []
 
@@ -47,6 +47,8 @@ try:
     assert __version__ == UTM_VERSION
 except (ModuleNotFoundError, ImportError, AssertionError):
     install_requires.append(_require('tm-eventsetup', UTM_VERSION))
+
+print(install_requires)
 
 setup(
     name='tm-python',
