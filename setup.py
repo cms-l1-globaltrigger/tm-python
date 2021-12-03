@@ -1,7 +1,7 @@
 import sys
 from setuptools import setup
 
-UTM_VERSION = '0.9.1'
+UTM_VERSION = '0.10.0'
 BASE_URL = 'https://github.com/cms-l1-globaltrigger'
 
 def _version():
@@ -11,14 +11,14 @@ def _version():
 def _platform():
     """Returns platform signature for wheels."""
     if sys.platform.startswith('linux'):
-        return 'manylinux1'
+        return 'manylinux_2_5_x86_64.manylinux1_x86_64'
     elif sys.platform.startswith('darwin'):
         return 'darwin'
     raise ValueError("Platform not supported: {}".format(sys.platform))
 
 def _signature():
     # Note: no more 'm' abiflag since Python 3.8
-    return 'cp{0}-cp{0}{1}-{2}_x86_64'.format(_version(), sys.abiflags, _platform())
+    return 'cp{0}-cp{0}{1}-{2}'.format(_version(), sys.abiflags, _platform())
 
 def _wheel_name(name, version):
     basename = name.replace('-', '_')

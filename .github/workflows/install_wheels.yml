@@ -1,12 +1,15 @@
 name: install wheels
 
-on: [push]
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      VERSION: "0.9.1"
+      VERSION: "0.10.0"
       USER: cms-l1-globaltrigger
     strategy:
       matrix:
