@@ -13,7 +13,7 @@ def _platform():
     if sys.platform.startswith('linux'):
         return 'manylinux_2_5_x86_64.manylinux1_x86_64'
     elif sys.platform.startswith('darwin'):
-        return 'darwin'
+        return 'macosx_10_13_x86_64'
     raise ValueError("Platform not supported: {}".format(sys.platform))
 
 def _signature():
@@ -47,8 +47,6 @@ try:
     assert __version__ == UTM_VERSION
 except (ModuleNotFoundError, ImportError, AssertionError):
     install_requires.append(_require('tm-eventsetup', UTM_VERSION))
-
-print(install_requires)
 
 setup(
     name='tm-python',
