@@ -1,7 +1,7 @@
 import sys
 from setuptools import setup
 
-UTM_VERSION = '0.11.2'
+UTM_VERSION = '0.12.0'
 BASE_URL = 'https://github.com/cms-l1-globaltrigger'
 
 def _version():
