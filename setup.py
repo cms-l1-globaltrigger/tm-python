@@ -13,7 +13,7 @@ def _platform():
     if sys.platform.startswith('linux'):
         return 'manylinux_2_17_x86_64.manylinux2014_x86_64'
     elif sys.platform.startswith('darwin'):
-        return 'macosx_10_15_x86_64'
+        return 'macosx_10_9_x86_64'
     raise ValueError("Platform not supported: {}".format(sys.platform))
 
 def _signature():
