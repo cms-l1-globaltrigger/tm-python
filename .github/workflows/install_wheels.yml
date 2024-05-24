@@ -5,12 +5,12 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     env:
-      VERSION: "0.13.0"
+      VERSION: "0.10.0"
       PYPI_INDEX: https://globaltrigger.web.cern.ch/pypi/
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2

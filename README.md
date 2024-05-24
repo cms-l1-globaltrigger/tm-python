@@ -11,5 +11,5 @@ It is recommended to install the utm Python bindings in a virtual environment
 which makes it also possible to run multiple versions of utm in parallel.
 
 ```bash
-pip install --index-url https://globaltrigger.web.cern.ch/pypi/ tm-python==0.13.0
+pip install --index-url https://globaltrigger.web.cern.ch/pypi/ tm-python==0.10.0
 ```
