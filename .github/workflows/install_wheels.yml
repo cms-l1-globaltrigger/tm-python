@@ -5,7 +5,7 @@ on: [workflow_dispatch]
 jobs:
   build:
     env:
-      VERSION: "0.10.0"
+      VERSION: "0.11.0"
       PYPI_INDEX: https://globaltrigger.web.cern.ch/pypi/
     strategy:
       matrix:
