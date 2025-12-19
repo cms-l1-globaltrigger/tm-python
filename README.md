@@ -13,3 +13,5 @@ which makes it also possible to run multiple versions of utm in parallel.
 ```bash
 pip install --extra-index-url https://globaltrigger.web.cern.ch/pypi tm-python==0.14.0
 ```
+
+**Note:** all tm-* packages are from now on published on our custom python package index at https://globaltrigger.web.cern.ch/pypi
