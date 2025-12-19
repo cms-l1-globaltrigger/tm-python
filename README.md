@@ -1,9 +1,9 @@
 # tm-python
 
 Meta package providing Python bindings for
-[tmTable](https://github.com/cms-l1-globaltrigger/tm-table),
-[tmGrammar](https://github.com/cms-l1-globaltrigger/tm-grammar) and
-[tmEventSetup](https://github.com/cms-l1-globaltrigger/tm-eventsetup).
+[tm-table](https://github.com/cms-l1-globaltrigger/tm-table),
+[tm-grammar](https://github.com/cms-l1-globaltrigger/tm-grammar) and
+[tm-eventsetup](https://github.com/cms-l1-globaltrigger/tm-eventsetup).
 
 ## Install instructions
 

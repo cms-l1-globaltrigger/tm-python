@@ -1,19 +1,17 @@
-name: install wheels
+name: Install wheels
 
-on:
-  push:
-    tags:
-      - '*'
+on: [workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     env:
-      VERSION: "0.13.0"
-      USER: cms-l1-globaltrigger
+      VERSION: "0.14.0"
+      PYPI_INDEX: https://globaltrigger.web.cern.ch/pypi/
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -25,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Install wheels
       run: |
-        python -m pip install git+https://github.com/${{ env.USER }}/tm-python.git@${{ env.VERSION }}
+        python -m pip install --index-url ${{ env.PYPI_INDEX }} tm-python==${{ env.VERSION }}
     - name: Verify packages
       run: |
         python -c "from tmTable import __version__; assert __version__ == '${{ env.VERSION }}'"
